@@ -5,7 +5,7 @@ let subTotal = 0;
 let total = 0;
 let arregloServiciosActualizado = [];
 //bandera para mostrar login por pompt
-let BANDERA_POMPT = 1;
+let BANDERA_POMPT = 0;
 if (BANDERA_POMPT != 0) {
   //alerta login
   alert("Inicio de sesión | usuario: Admin | password: 12345");
@@ -44,6 +44,9 @@ const arregloServicios = [
   "Olivo",
   "Ficus",
 ];
+//busqueda de elemento del arreglo servicios
+console.log(arregloServicios.includes('Jacaranda'));
+console.log(arregloServicios.includes('Pino'));
 function cargaDatos() {
   cargarServicios();
 }
