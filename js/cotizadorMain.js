@@ -5,6 +5,22 @@ let total = 0;
 function verison(){
     return "V 1.0.0.0";
 }
+
+const objetoServicios = [
+  { id: "SERV-1", servicio: "Colocación Pasto Natural", costo: 2000 },
+  { id: "SERV-2", servicio: "Fertilizantes", costo: 10000 },
+  { id: "SERV-3", servicio: "Poda Arboles", costo: 20000 },
+  { id: "SERV-4", servicio: "Cargar Costal Arena", costo: 30000 },
+];
+const objetoArboles = [
+  { id: "ARB-1", arbol: "Jacaranda", costo: 2000 },
+  { id: "ARB-2", arbol: "Olivo", costo: 10000 },
+  { id: "ARB-3", arbol: "Ficus", costo: 20000 },
+  { id: "ARB-4", arbol: "Pino", costo: 30000 },
+  { id: "ARB-5", arbol: "Acacia", costo: 40000 },
+];
+const servJSON = JSON.stringify(objetoServicios);
+const arboJSONs = JSON.stringify(objetoArboles);
 //Generar fecha actual
 const fecha = new Date();
 const año = fecha.getFullYear();
@@ -26,13 +42,7 @@ function leyendaNota(){
 }
 
 document.getElementById("nota").innerHTML = leyendaNota();
-const objetoServicios = [
-  { id: 1, servicio: "Poda_Arbol", costo: 2000 },
-  { id: 2, servicio: "Cortina_Arboles", costo: 10000 },
-  { id: 3, servicio: "Jacaranda", costo: 20000 },
-  { id: 4, servicio: "Olivo", costo: 30000 },
-  { id: 5, servicio: "Ficus", costo: 40000 },
-];
+
 
 //Funciones para realizar calculo
 function calculaTotalIva(costo, iva, cantidad) {
@@ -92,4 +102,31 @@ function calculaTotalIva(costo, iva, cantidad) {
       document.getElementById("costoImp").innerHTML = costo;
       document.getElementById("total").innerHTML =caluclaTotalSinIva(costo,cantidad);
     }
+  
   }
+   
+
+
+localStorage.setItem ("Servicios",servJSON);
+localStorage.setItem("Arboles", arboJSONs);
+
+const serviciosAdd = JSON.parse(localStorage.getItem("N"));
+  console.log(serviciosAdd[1].arbol);
+
+function cargaDatos() {
+  cargarServicios();
+}
+
+function cargarServicios() {
+  //Ordenar de a-z
+  arregloServicios.sort();
+  agregarOpciones("servicios", arregloServicios);
+}
+function agregarOpciones(domElement, arregloServicios) {
+  var select = document.getElementsByName(domElement)[0];
+  for (value in arregloServicios) {
+    var option = document.createElement("option");
+    option.text = arregloServicios[value];
+    select.add(option);
+  }
+}
