@@ -41,7 +41,7 @@ function leyendaNota(){
     return "Nota: Al ser aceptado este presupuesto se requiere del 60% del anticipo, el 40% restante a la entrega de dichos trabajos";
 }
 
-document.getElementById("nota").innerHTML = leyendaNota();
+//document.getElementById("nota").innerHTML = leyendaNota();
 
 
 //Funciones para realizar calculo
@@ -111,7 +111,7 @@ localStorage.setItem ("Servicios",servJSON);
 localStorage.setItem("Arboles", arboJSONs);
 
 const serviciosAdd = JSON.parse(localStorage.getItem("N"));
-  console.log(serviciosAdd[1].arbol);
+  //console.log(serviciosAdd[1].arbol);
 
 function cargaDatos() {
   cargarServicios();
@@ -130,3 +130,5 @@ function agregarOpciones(domElement, arregloServicios) {
     select.add(option);
   }
 }
+
+
