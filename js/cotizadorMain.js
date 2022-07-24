@@ -5,7 +5,9 @@ let total = 0;
 function verison(){
     return "V 1.0.0.0";
 }
+const URL ='js/data/products.json'
 
+fetch(URL).then(res => res.json()).then(data => {console.log(data)});
 const objetoServicios = [
   { id: "SERV-1", servicio: "Colocación Pasto Natural", costo: 2000 },
   { id: "SERV-2", servicio: "Fertilizantes", costo: 10000 },

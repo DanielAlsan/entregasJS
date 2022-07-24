@@ -1,0 +1,7 @@
+[
+    { "id": 1, "arbol": "Poda_Arbol", "costo": 2000 },
+    { "id": 2, "arbol": "Cortina_Arboles", "costo": 10000 },
+    { "id": 3, "arbol": "Jacaranda", "costo": 20000 },
+    { "id": 4, "arbol": "Olivo", "costo": 30000 },
+    { "id": 5, "arbol": "Ficus", "costo": 40000 }
+]
