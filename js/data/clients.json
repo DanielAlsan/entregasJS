@@ -1,4 +1,5 @@
 [
     { "id": 1, "nombre": "Arq. Lilia López", "ubicacion": "Centro Asturiano México" },
-    { "id": 2, "nombre": "Daniel Sánchez", "ubicacion": "Centro Libanes" }
+    { "id": 2, "nombre": "Arq. Diana Flores", "ubicacion": "Olivar de los Padres" },
+    { "id": 3, "nombre": "Daniel Sánchez", "ubicacion": "Centro Libanes" }
 ]
